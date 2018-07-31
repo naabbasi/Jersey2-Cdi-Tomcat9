@@ -1,0 +1,13 @@
+<beans
+        xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/beans_1_1.xsd"
+        bean-discovery-mode="all"
+>
+
+    <!--Optional, just write to keep remember how to exclude not needed classes-->
+    <scan>
+        <exclude name="edu.learn.cdi.demo.servlet"></exclude>
+    </scan>
+
+</beans>
