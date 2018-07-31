@@ -63,6 +63,13 @@
             <artifactId>weld-servlet-core</artifactId>
             <version>3.0.5.Final</version>
         </dependency>
+
+        <!-- Jersey server sent event-->
+        <dependency>
+            <groupId>org.glassfish.jersey.media</groupId>
+            <artifactId>jersey-media-sse</artifactId>
+            <version>${jersey2.version}</version>
+        </dependency>
     </dependencies>
 
     <build>

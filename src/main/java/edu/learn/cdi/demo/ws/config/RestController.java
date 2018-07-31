@@ -9,6 +9,7 @@ import java.util.Set;
 
 public class RestController extends ResourceConfig {
     public RestController(){
+        register(ResponseCorsFilter.class);
         registerClasses(getResourcesInstance());
     }
 
