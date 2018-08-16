@@ -10,6 +10,8 @@ import java.util.Set;
 public class RestController extends ResourceConfig {
     public RestController(){
         register(ResponseCorsFilter.class);
+        register(io.swagger.jaxrs.listing.ApiListingResource.class);
+        register(io.swagger.jaxrs.listing.SwaggerSerializers.class);
         registerClasses(getResourcesInstance());
     }
 
