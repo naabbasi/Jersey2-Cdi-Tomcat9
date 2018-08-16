@@ -14,6 +14,7 @@ import javax.ws.rs.core.MediaType;
 import java.io.IOException;
 
 @Path("/users")
+@io.swagger.annotations.Api(value = "user")
 @RequestScoped
 public class UserWS {
     private ServiceBean service;
