@@ -5,7 +5,6 @@ import com.codahale.metrics.jersey2.InstrumentedResourceMethodApplicationListene
 import edu.learn.cdi.demo.bean.ServiceBean;
 import edu.learn.cdi.demo.listener.metrics.WebMetricsListener;
 import edu.learn.cdi.demo.ws.UserWS;
-import org.glassfish.hk2.utilities.binding.AbstractBinder;
 import org.glassfish.jersey.server.ResourceConfig;
 
 import java.util.Set;
@@ -14,6 +13,8 @@ import java.util.concurrent.TimeUnit;
 public class RestController extends ResourceConfig {
     public RestController(){
         register(ResponseCorsFilter.class);
+        register(io.swagger.jaxrs.listing.ApiListingResource.class);
+        register(io.swagger.jaxrs.listing.SwaggerSerializers.class);
         registerJerseyMetrics();
         registerClasses(getResourcesInstance());
     }
