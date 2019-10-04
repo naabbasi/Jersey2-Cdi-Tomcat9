@@ -78,19 +78,6 @@
             <version>${jersey2.version}</version>
         </dependency>
 
-        <!-- JDK 11 support for XML -->
-        <dependency>
-            <groupId>javax.xml.bind</groupId>
-            <artifactId>jaxb-api</artifactId>
-            <version>2.3.1</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.glassfish.jaxb</groupId>
-            <artifactId>jaxb-runtime</artifactId>
-            <version>2.3.1</version>
-        </dependency>
-
         <!-- Swegger for jersey 2.x service documentation -->
         <dependency>
             <groupId>io.swagger</groupId>
