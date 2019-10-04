@@ -17,12 +17,22 @@ import java.io.IOException;
 @io.swagger.annotations.Api(value = "user")
 @RequestScoped
 public class UserWS {
+    private ServiceBean service;
 
-    public UserWS(){
+    public UserWS() {
     }
 
     @Inject
-    private ServiceBean service;
+    public UserWS(ServiceBean service) {
+        this.service = service;
+    }
+
+    @GET
+    @Path("/user")
+    @Produces(MediaType.APPLICATION_JSON)
+    public String sayHello(){
+        return "Hello, I m working ...";
+    }
 
     @GET
     @Path("/userInfo")
