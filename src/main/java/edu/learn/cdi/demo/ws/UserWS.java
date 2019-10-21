@@ -229,5 +229,14 @@ public class UserWS {
                 credential.setUserProfile(profile);
             }
         });
+        
+        /*Done by owais*/
+        OidcConfiguration config = LoginWS.getOidcConfiguration(clientName);
+        UserInfoOidcAuthenticator authenticator = new UserInfoOidcAuthenticator(config);
+        WebContext context = new J2EContext(request, response);
+        TokenCredentials credentials = new TokenCredentials(oauthToken);
+        authenticator.validate(credentials, context);
+        OidcProfile profile = (OidcProfile) credentials.getUserProfile();
+        String email = profile.getEmail(); 
     }
 }
